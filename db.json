@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "email": "yourEmail@poshta.com",
+      "password": "1111",
+      "username": "Your username",
+      "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+    },
+    {
+      "email": "secondEmail@poshta.com",
+      "password": "2222",
+      "username": "Your username2",
+      "jwt": "fdsICls35kCMsSW21jsCM4OGPLs4CMXkd2jf"
+    }
+  ]
+}
