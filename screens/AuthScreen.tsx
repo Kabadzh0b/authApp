@@ -1,6 +1,7 @@
 import {Dimensions, Image, Pressable, StyleSheet, Text, TextInput, View} from "react-native";
 import {useEffect, useState} from "react";
 import {useTypedSelector} from "../hooks/useTypedSelector";
+import {useActions} from "../hooks/useActions";
 
 const AuthScreen = () => {
     const [email, setEmail] = useState("");
@@ -8,6 +9,8 @@ const AuthScreen = () => {
     const [screenWidth, setScreenWidth] = useState(Dimensions.get('window').width);
     const inputContainerWidth = screenWidth * 0.8;
     const buttonWidth = screenWidth * 0.8;
+
+    const {login} = useActions();
 
     useEffect(() => {
         const updateWidth = () => {
@@ -44,6 +47,7 @@ const AuthScreen = () => {
                 />
             </View>
             <Pressable style={[styles.button, {width: buttonWidth}]} onPress={() => {
+                login(email, password);
             }}>
                 <Text style={styles.buttonText}>Увійти</Text>
             </Pressable>
