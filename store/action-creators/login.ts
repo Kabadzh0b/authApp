@@ -8,8 +8,7 @@ export const login = (email: string, password: string) => {
         try {
             dispatch({type: AuthActionTypes.AUTH});
             const userList = await axios.get(USERS_URL);
-            let userFounded:boolean = false;
-            console.log(userList);
+            let userFounded: boolean = false;
             for (const user of userList.data) {
                 if (user.email === email) {
                     if (user.password === password) {
@@ -27,8 +26,8 @@ export const login = (email: string, password: string) => {
             if (!userFounded) throw new Error("Невірний email");
 
         } catch (e) {
-            console.log(e);
-            dispatch({type: AuthActionTypes.AUTH_ERROR, payload: "Error"});
+            const errorMessage = e as string;
+            dispatch({type: AuthActionTypes.AUTH_ERROR, payload: errorMessage});
         }
     }
 }

@@ -1,15 +1,17 @@
-import {Dimensions, Image, StyleSheet, TextInput, View} from "react-native";
+import {Dimensions, Image, StyleSheet, Text, View} from "react-native";
 import React, {useEffect, useState} from "react";
 import {useTypedSelector} from "../hooks/useTypedSelector";
 import {NativeStackScreenProps} from "@react-navigation/native-stack";
 import {RootStackParamList} from "../types/RootStackParamList";
-import {Text} from '@rneui/themed';
 import LogInButton from "../components/LogInButton";
+import LogInInput from "../components/LogInInput";
 
 type HomeScreenProps = NativeStackScreenProps<RootStackParamList, "Home">
 const AuthScreen: React.FC<HomeScreenProps> = (props) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [validEmail, setValidEmail] = useState(true);
+    const [validPassword, setValidPassword] = useState(true);
     const [screenWidth, setScreenWidth] = useState(Dimensions.get('window').width);
     const inputContainerWidth = screenWidth * 0.8;
     const buttonWidth = screenWidth * 0.8;
@@ -24,37 +26,33 @@ const AuthScreen: React.FC<HomeScreenProps> = (props) => {
     }, []);
 
     const {authData, loading, error} = useTypedSelector(state => state.auth);
-    console.log(authData, loading, error);
     if (authData.username !== null && authData.jwt !== null) {
         props.navigation.push("Profile", {
             username: authData.username,
             jwt: authData.jwt,
         });
     }
+
+    if (loading) {
+        return (
+            <View style={styles.container}>
+                <Text style={styles.loading}>Loading</Text>
+            </View>
+        );
+    }
+
     return (
         <View style={styles.container}>
             <Image style={styles.logo} source={{
                 uri: 'https://flora24.online/images/logo.svg',
             }}/>
-            <View style={[styles.inputContainer, {width: inputContainerWidth}]}>
-                <Text>✉️</Text>
-                <TextInput
-                    style={styles.input}
-                    onChangeText={setEmail}
-                    value={email}
-                    placeholder={"Email"}
-                />
-            </View>
-            <View style={[styles.inputContainer, {width: inputContainerWidth}]}>
-                <Text>🔒</Text>
-                <TextInput
-                    style={styles.input}
-                    onChangeText={setPassword}
-                    value={password}
-                    placeholder={"Пароль"}
-                />
-            </View>
-            <LogInButton email={email} password={password} width={buttonWidth}/>
+            <LogInInput valid={validEmail} setValid={setValidEmail} width={inputContainerWidth} value={email}
+                        setValue={setEmail} img={"email"}/>
+            <LogInInput valid={validPassword} setValid={setValidPassword} width={inputContainerWidth} value={password}
+                        setValue={setPassword} img={"password"}/>
+            <Text style={error ? styles.warning : {display: "none"}}>Щось пішло не так...</Text>
+            <LogInButton email={email} password={password} width={buttonWidth} setValidEmail={setValidEmail}
+                         setValidPassword={setValidPassword}/>
         </View>
     )
 }
@@ -72,15 +70,10 @@ const styles = StyleSheet.create({
         width: 200,
         height: 62,
     },
-    inputContainer: {
-        flexDirection: "row",
-        alignItems: "center",
-        borderBottomWidth: 1,
-        marginBottom: 16,
+    warning: {
+        color: "red",
     },
-    input: {
-        width: '100%',
-        height: 40,
-        paddingHorizontal: 8,
-    },
+    loading: {
+        fontSize:50,
+    }
 });

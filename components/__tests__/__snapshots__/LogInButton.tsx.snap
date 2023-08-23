@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`big width renders correctly 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "rgba(111, 202, 186, 1)",
+        "borderRadius": 5,
+        "height": 50,
+        "justifyContent": "center",
+        "marginVertical": 10,
+        "maxWidth": 500,
+      },
+      {
+        "width": 1000,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      {
+        "fontSize": 23,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Увійти
+  </Text>
+</View>
+`;
+
+exports[`default renders correctly 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "rgba(111, 202, 186, 1)",
+        "borderRadius": 5,
+        "height": 50,
+        "justifyContent": "center",
+        "marginVertical": 10,
+        "maxWidth": 500,
+      },
+      {
+        "width": 200,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      {
+        "fontSize": 23,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Увійти
+  </Text>
+</View>
+`;
+
+exports[`empty renders correctly 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "rgba(111, 202, 186, 1)",
+        "borderRadius": 5,
+        "height": 50,
+        "justifyContent": "center",
+        "marginVertical": 10,
+        "maxWidth": 500,
+      },
+      {
+        "width": 200,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      {
+        "fontSize": 23,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Увійти
+  </Text>
+</View>
+`;
+
+exports[`renders correctly 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    [
+      {
+        "backgroundColor": "rgba(111, 202, 186, 1)",
+        "borderRadius": 5,
+        "height": 50,
+        "marginHorizontal": 50,
+        "marginVertical": 10,
+        "maxWidth": 500,
+      },
+      {
+        "width": 200,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      {
+        "fontSize": 23,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Увійти
+  </Text>
+</View>
+`;

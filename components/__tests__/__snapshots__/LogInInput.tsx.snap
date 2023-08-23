@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`big width renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "flexDirection": "row",
+        "marginBottom": 16,
+        "maxWidth": 500,
+      },
+      {
+        "width": 1000,
+      },
+      {
+        "borderColor": "red",
+      },
+    ]
+  }
+>
+  <Text>
+    ✉️
+  </Text>
+  <TextInput
+    onChangeText={[Function]}
+    placeholder="Пароль"
+    style={
+      {
+        "height": 40,
+        "paddingHorizontal": 8,
+        "width": "100%",
+      }
+    }
+    value=""
+  />
+</View>
+`;
+
+exports[`default password renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "flexDirection": "row",
+        "marginBottom": 16,
+        "maxWidth": 500,
+      },
+      {
+        "width": 200,
+      },
+      {},
+    ]
+  }
+>
+  <Text>
+    ✉️
+  </Text>
+  <TextInput
+    onChangeText={[Function]}
+    placeholder="Пароль"
+    style={
+      {
+        "height": 40,
+        "paddingHorizontal": 8,
+        "width": "100%",
+      }
+    }
+    value="ESFS"
+  />
+</View>
+`;
+
+exports[`default renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "flexDirection": "row",
+        "marginBottom": 16,
+        "maxWidth": 500,
+      },
+      {
+        "width": 200,
+      },
+      {},
+    ]
+  }
+>
+  <Text>
+    ✉️
+  </Text>
+  <TextInput
+    onChangeText={[Function]}
+    placeholder="Пароль"
+    style={
+      {
+        "height": 40,
+        "paddingHorizontal": 8,
+        "width": "100%",
+      }
+    }
+    value="ESFS"
+  />
+</View>
+`;
+
+exports[`empty renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "flexDirection": "row",
+        "marginBottom": 16,
+        "maxWidth": 500,
+      },
+      {
+        "width": 200,
+      },
+      {},
+    ]
+  }
+>
+  <Text>
+    ✉️
+  </Text>
+  <TextInput
+    onChangeText={[Function]}
+    placeholder="Пароль"
+    style={
+      {
+        "height": 40,
+        "paddingHorizontal": 8,
+        "width": "100%",
+      }
+    }
+    value=""
+  />
+</View>
+`;
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "flexDirection": "row",
+        "marginBottom": 16,
+        "maxWidth": 500,
+      },
+      {
+        "width": 200,
+      },
+      {},
+    ]
+  }
+>
+  <Text>
+    ✉️
+  </Text>
+  <TextInput
+    onChangeText={[Function]}
+    placeholder="Пароль"
+    style={
+      {
+        "height": 40,
+        "paddingHorizontal": 8,
+        "width": "100%",
+      }
+    }
+    value="ESFS"
+  />
+</View>
+`;
+
+exports[`valid false renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "borderBottomWidth": 1,
+        "flexDirection": "row",
+        "marginBottom": 16,
+        "maxWidth": 500,
+      },
+      {
+        "width": 200,
+      },
+      {
+        "borderColor": "red",
+      },
+    ]
+  }
+>
+  <Text>
+    ✉️
+  </Text>
+  <TextInput
+    onChangeText={[Function]}
+    placeholder="Пароль"
+    style={
+      {
+        "height": 40,
+        "paddingHorizontal": 8,
+        "width": "100%",
+      }
+    }
+    value=""
+  />
+</View>
+`;
