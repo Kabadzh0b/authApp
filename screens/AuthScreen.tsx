@@ -31,6 +31,8 @@ const AuthScreen: React.FC<HomeScreenProps> = (props) => {
             username: authData.username,
             jwt: authData.jwt,
         });
+        authData.username = null;
+        authData.jwt = null;
     }
 
     if (loading) {
