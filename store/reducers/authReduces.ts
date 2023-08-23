@@ -1,7 +1,15 @@
 import {AuthActions, AuthActionTypes} from "../../types/AuthAction";
 import {AuthState} from "../../types/AuthState";
 
-export const authReducer = (state: AuthState, action: AuthActions): AuthState => {
+const initialState:AuthState = {
+    authData: {
+        username:null,
+        jwt:null,
+    },
+    loading:false,
+    error:null,
+}
+export const authReducer = (state: AuthState = initialState, action: AuthActions): AuthState => {
     switch (action.type) {
         case AuthActionTypes.AUTH:
             return {loading: true, error: null, authData: {username:null, jwt:null}};

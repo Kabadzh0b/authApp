@@ -1,9 +1,12 @@
 import {Dimensions, Image, Pressable, StyleSheet, Text, TextInput, View} from "react-native";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useTypedSelector} from "../hooks/useTypedSelector";
 import {useActions} from "../hooks/useActions";
+import {NativeStackScreenProps} from "@react-navigation/native-stack";
+import {RootStackParamList} from "../types/RootStackParamList";
 
-const AuthScreen = () => {
+type HomeScreenProps = NativeStackScreenProps<RootStackParamList, "Home">
+const AuthScreen: React.FC<HomeScreenProps> = (props) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [screenWidth, setScreenWidth] = useState(Dimensions.get('window').width);
@@ -23,6 +26,12 @@ const AuthScreen = () => {
 
     const {authData, loading, error} = useTypedSelector(state => state.auth);
     console.log(authData, loading, error);
+    if (authData.username !== null && authData.jwt !== null) {
+        props.navigation.push("Profile", {
+            username: authData.username,
+            jwt: authData.jwt,
+        });
+    }
     return (
         <View style={styles.container}>
             <Image style={styles.logo} source={{
